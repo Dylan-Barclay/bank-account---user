@@ -16,3 +16,9 @@ class User:
 
     def display_user_balance(self):
         print(f"User: {self.name}, Balance: {self.account}")
+        return self
+    
+    def interest(self):
+        if self.account.balance > 0:
+            print(f'{self.account.yield_interest()}')
+            return self

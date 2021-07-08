@@ -21,12 +21,8 @@ class BankAccount():
         return self
 
     def yield_interest(self):
-        if self.balance > 0:
-            self.balance += self.balance * self.int_rate
-            print(f'New balance is {self.balance}') 
-            return self
-        else:
-            return None
+        self.balance += self.balance * self.int_rate
+        return(f'New balance is {self.balance}') 
 
     def __str__(self):
         return f'{self.balance}'
